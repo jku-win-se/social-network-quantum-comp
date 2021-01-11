@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="jku.se.social.network.generate.networkx.menu.GenerateNetworkX"
+            id="jku.se.social.network.generate.networkx.GenerateNetworkX"
+            name="Generate NetworkX">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
+         <command
+               commandId="jku.se.social.network.generate.networkx.GenerateNetworkX"
+               label="Generate NetworkX"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <iterate
+                     ifEmpty="false">
+                  <adapt
+                        type="org.eclipse.core.resources.IResource">
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="socialnetwork">
+                     </test>
+                  </adapt>
+               </iterate>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sn:SocialNetwork xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sn="http://social-network/1.0" name="ZacharyKarateClub">
+  <persons name="0"/>
+  <persons name="1"/>
+  <persons name="2"/>
+  <persons name="3"/>
+  <persons name="4"/>
+  <persons name="5"/>
+  <persons name="6"/>
+  <persons name="7"/>
+  <persons name="8"/>
+  <persons name="9"/>
+  <persons name="10"/>
+  <persons name="11"/>
+  <persons name="12"/>
+  <persons name="13"/>
+  <persons name="14"/>
+  <persons name="15"/>
+  <persons name="16"/>
+  <persons name="17"/>
+  <persons name="18"/>
+  <persons name="19"/>
+  <persons name="20"/>
+  <persons name="21"/>
+  <persons name="22"/>
+  <persons name="23"/>
+  <persons name="24"/>
+  <persons name="25"/>
+  <persons name="26"/>
+  <persons name="27"/>
+  <persons name="28"/>
+  <persons name="29"/>
+  <persons name="30"/>
+  <persons name="31"/>
+  <persons name="32"/>
+  <persons name="33"/>
+  <relationships source="//@persons.1" target="//@persons.0"/>
+  <relationships source="//@persons.2" target="//@persons.0"/>
+  <relationships source="//@persons.2" target="//@persons.1"/>
+  <relationships source="//@persons.3" target="//@persons.0"/>
+  <relationships source="//@persons.3" target="//@persons.1"/>
+  <relationships source="//@persons.3" target="//@persons.2"/>
+  <relationships source="//@persons.4" target="//@persons.0"/>
+  <relationships source="//@persons.5" target="//@persons.0"/>
+  <relationships source="//@persons.6" target="//@persons.0"/>
+  <relationships source="//@persons.6" target="//@persons.4"/>
+  <relationships source="//@persons.6" target="//@persons.5"/>
+  <relationships source="//@persons.7" target="//@persons.0"/>
+  <relationships source="//@persons.7" target="//@persons.1"/>
+  <relationships source="//@persons.7" target="//@persons.2"/>
+  <relationships source="//@persons.7" target="//@persons.3"/>
+  <relationships source="//@persons.8" target="//@persons.0"/>
+  <relationships source="//@persons.8" target="//@persons.2"/>
+  <relationships source="//@persons.9" target="//@persons.2"/>
+  <relationships source="//@persons.10" target="//@persons.0"/>
+  <relationships source="//@persons.10" target="//@persons.4"/>
+  <relationships source="//@persons.10" target="//@persons.5"/>
+  <relationships source="//@persons.11" target="//@persons.0"/>
+  <relationships source="//@persons.12" target="//@persons.0"/>
+  <relationships source="//@persons.12" target="//@persons.3"/>
+  <relationships source="//@persons.13" target="//@persons.0"/>
+  <relationships source="//@persons.13" target="//@persons.1"/>
+  <relationships source="//@persons.13" target="//@persons.2"/>
+  <relationships source="//@persons.13" target="//@persons.3"/>
+  <relationships source="//@persons.16" target="//@persons.5"/>
+  <relationships source="//@persons.16" target="//@persons.6"/>
+  <relationships source="//@persons.17" target="//@persons.0"/>
+  <relationships source="//@persons.17" target="//@persons.1"/>
+  <relationships source="//@persons.19" target="//@persons.0"/>
+  <relationships source="//@persons.19" target="//@persons.1"/>
+  <relationships source="//@persons.21" target="//@persons.0"/>
+  <relationships source="//@persons.21" target="//@persons.1"/>
+  <relationships source="//@persons.25" target="//@persons.23"/>
+  <relationships source="//@persons.25" target="//@persons.24"/>
+  <relationships source="//@persons.27" target="//@persons.2"/>
+  <relationships source="//@persons.27" target="//@persons.23"/>
+  <relationships source="//@persons.27" target="//@persons.24"/>
+  <relationships source="//@persons.28" target="//@persons.2"/>
+  <relationships source="//@persons.29" target="//@persons.23"/>
+  <relationships source="//@persons.29" target="//@persons.26"/>
+  <relationships source="//@persons.30" target="//@persons.1"/>
+  <relationships source="//@persons.30" target="//@persons.8"/>
+  <relationships source="//@persons.31" target="//@persons.0"/>
+  <relationships source="//@persons.31" target="//@persons.24"/>
+  <relationships source="//@persons.31" target="//@persons.25"/>
+  <relationships source="//@persons.31" target="//@persons.28"/>
+  <relationships source="//@persons.32" target="//@persons.2"/>
+  <relationships source="//@persons.32" target="//@persons.8"/>
+  <relationships source="//@persons.32" target="//@persons.14"/>
+  <relationships source="//@persons.32" target="//@persons.15"/>
+  <relationships source="//@persons.32" target="//@persons.18"/>
+  <relationships source="//@persons.32" target="//@persons.20"/>
+  <relationships source="//@persons.32" target="//@persons.22"/>
+  <relationships source="//@persons.32" target="//@persons.23"/>
+  <relationships source="//@persons.32" target="//@persons.29"/>
+  <relationships source="//@persons.32" target="//@persons.30"/>
+  <relationships source="//@persons.32" target="//@persons.31"/>
+  <relationships source="//@persons.33" target="//@persons.8"/>
+  <relationships source="//@persons.33" target="//@persons.9"/>
+  <relationships source="//@persons.33" target="//@persons.13"/>
+  <relationships source="//@persons.33" target="//@persons.14"/>
+  <relationships source="//@persons.33" target="//@persons.15"/>
+  <relationships source="//@persons.33" target="//@persons.18"/>
+  <relationships source="//@persons.33" target="//@persons.19"/>
+  <relationships source="//@persons.33" target="//@persons.20"/>
+  <relationships source="//@persons.33" target="//@persons.22"/>
+  <relationships source="//@persons.33" target="//@persons.23"/>
+  <relationships source="//@persons.33" target="//@persons.26"/>
+  <relationships source="//@persons.33" target="//@persons.27"/>
+  <relationships source="//@persons.33" target="//@persons.28"/>
+  <relationships source="//@persons.33" target="//@persons.29"/>
+  <relationships source="//@persons.33" target="//@persons.30"/>
+  <relationships source="//@persons.33" target="//@persons.31"/>
+  <relationships source="//@persons.33" target="//@persons.32"/>
+</sn:SocialNetwork>

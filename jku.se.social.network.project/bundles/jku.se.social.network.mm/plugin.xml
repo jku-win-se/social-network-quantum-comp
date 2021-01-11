@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="ConvertZachary2EMFModel"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="jku.se.social.network.mm.convert.ConvertMatrixKaratetoSNModel">
+         </run>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SocialNetwork -->
+      <package
+            uri="http://social-network/1.0"
+            class="jku.se.social.network.mm.SocialNetwork.SocialNetworkPackage"
+            genModel="model/SocialNetwork.genmodel"/>
+   </extension>
+
+</plugin>
