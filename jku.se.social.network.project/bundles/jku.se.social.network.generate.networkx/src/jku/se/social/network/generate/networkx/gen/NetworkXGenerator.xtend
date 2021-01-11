@@ -27,6 +27,7 @@ class NetworkXGenerator extends AbstractGenerator{
 		«FOR relation : sn.relationships»
 		G.add_edge(«relation.source.name», «relation.target.name»)
 		«ENDFOR»
+		nx.write_gpickle(G, "«sn.name»")
 		'''
 	}	
 }

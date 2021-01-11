@@ -54,6 +54,11 @@ public class NetworkXGenerator extends AbstractGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
+    _builder.append("nx.write_gpickle(G, \"");
+    String _name_3 = sn.getName();
+    _builder.append(_name_3);
+    _builder.append("\")");
+    _builder.newLineIfNotEmpty();
     return _builder;
   }
 }
