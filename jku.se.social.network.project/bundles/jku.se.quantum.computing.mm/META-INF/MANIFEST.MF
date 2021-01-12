@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: jku.se.quantum.computing.mm
-Bundle-SymbolicName: jku.se.quantum.computing.mm; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: jku.se.quantum.computing.mm;singleton:=true
+Automatic-Module-Name: jku.se.quantum.computing.mm
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: jku.se.quantum.computing.mm.QuantumComputing,
+ jku.se.quantum.computing.mm.QuantumComputing.impl,
+ jku.se.quantum.computing.mm.QuantumComputing.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

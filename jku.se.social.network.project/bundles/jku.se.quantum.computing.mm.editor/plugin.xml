@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated QuantumComputing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="jku.se.quantum.computing.mm.QuantumComputing.presentation.QuantumComputingModelWizardID"
+            name="%_UI_QuantumComputingModelWizard_label"
+            class="jku.se.quantum.computing.mm.QuantumComputing.presentation.QuantumComputingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QuantumComputingModelFile.gif">
+         <description>%_UI_QuantumComputingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated QuantumComputing -->
+      <editor
+            id="jku.se.quantum.computing.mm.QuantumComputing.presentation.QuantumComputingEditorID"
+            name="%_UI_QuantumComputingEditor_label"
+            icon="icons/full/obj16/QuantumComputingModelFile.gif"
+            extensions="quantumcomputing"
+            class="jku.se.quantum.computing.mm.QuantumComputing.presentation.QuantumComputingEditor"
+            contributorClass="jku.se.quantum.computing.mm.QuantumComputing.presentation.QuantumComputingActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
