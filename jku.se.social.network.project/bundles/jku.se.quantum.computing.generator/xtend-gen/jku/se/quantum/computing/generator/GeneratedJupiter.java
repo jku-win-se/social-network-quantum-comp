@@ -31,32 +31,40 @@ public class GeneratedJupiter extends AbstractGenerator {
     {
       int counter = 0;
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("import networkx as nx\t\t");
+      _builder.append("import import_ipynb");
       _builder.newLine();
       {
         EList<QuantumAlgorithm> _quantumalgorithms = qLib.getQuantumalgorithms();
         for(final QuantumAlgorithm qAlgorithm : _quantumalgorithms) {
+          _builder.append("import ");
+          String _name = qAlgorithm.getName();
+          _builder.append(_name);
+          _builder.newLineIfNotEmpty();
+        }
+      }
+      {
+        EList<QuantumAlgorithm> _quantumalgorithms_1 = qLib.getQuantumalgorithms();
+        for(final QuantumAlgorithm qAlgorithm_1 : _quantumalgorithms_1) {
           _builder.append("res_");
           int _plusPlus = counter++;
           _builder.append(_plusPlus);
           _builder.append("=");
-          String _name = qAlgorithm.getName();
-          _builder.append(_name);
+          String _name_1 = qAlgorithm_1.getName();
+          _builder.append(_name_1);
           _builder.append("(");
           _builder.newLineIfNotEmpty();
-          _builder.append("\t");
-          _builder.append("nx.read_gpickle(");
-          String _name_1 = qAlgorithm.getName();
-          _builder.append(_name_1, "\t");
-          _builder.append(")");
+          _builder.append("graphname=\"");
+          String _name_2 = qAlgorithm_1.getFile().getName();
+          _builder.append(_name_2);
+          _builder.append("\"");
           _builder.newLineIfNotEmpty();
           {
-            EList<Parameter> _parameters = qAlgorithm.getParameters();
+            EList<Parameter> _parameters = qAlgorithm_1.getParameters();
             for(final Parameter parameter : _parameters) {
               _builder.append("\t");
               _builder.append(",");
-              String _name_2 = parameter.getName();
-              _builder.append(_name_2, "\t");
+              String _name_3 = parameter.getName();
+              _builder.append(_name_3, "\t");
               String _string = this.formatParameter(parameter).toString();
               _builder.append(_string, "\t");
               _builder.newLineIfNotEmpty();

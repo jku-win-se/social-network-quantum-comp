@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <qc:QuantumLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qc="http://quantum-computing/1.0" name="Library-QC-Algorithms">
   <quantumalgorithms name="GB1" file="//@files.0">
-    <parameters name="G" value="" dataType="GRAPH"/>
-    <parameters name="method" value="sim_anneal"/>
     <parameters name="backend" value="simulator"/>
     <parameters name="subset_size" value="12" dataType="INTEGER"/>
   </quantumalgorithms>
   <quantumalgorithms name="GB2_mod" file="//@files.0">
-    <parameters name="G" dataType="GRAPH"/>
-    <parameters name="k" value="int(np.log2(int(np.sqrt(34))+1))+1"/>
+    <parameters name="k" value="None" dataType="INTEGER"/>
     <parameters name="backend" value="simulator"/>
     <parameters name="subset_size" value="12" dataType="INTEGER"/>
   </quantumalgorithms>
-  <quantumalgorithms name="QA1" file="//@files.0">
-    <parameters name="G" dataType="GRAPH"/>
-  </quantumalgorithms>
+  <quantumalgorithms name="QA1" file="//@files.0"/>
   <files name="ZacharyKarateClub"/>
 </qc:QuantumLibrary>

@@ -22,10 +22,13 @@ class GeneratedJupiter extends AbstractGenerator{
 	def generateQuantumExecution(QuantumLibrary qLib) {
 		var int counter = 0;
 		'''
-		import networkx as nx		
+		import import_ipynb
+		«FOR qAlgorithm: qLib.quantumalgorithms»
+		import «qAlgorithm.name»
+		«ENDFOR»
 		«FOR qAlgorithm: qLib.quantumalgorithms»
 		res_«counter++»=«qAlgorithm.name»(
-			nx.read_gpickle(«qAlgorithm.name»)
+		graphname="«qAlgorithm.file.name»"
 			«FOR parameter : qAlgorithm.parameters»
 					,«parameter.name»«parameter.formatParameter.toString»
 			«ENDFOR»					
