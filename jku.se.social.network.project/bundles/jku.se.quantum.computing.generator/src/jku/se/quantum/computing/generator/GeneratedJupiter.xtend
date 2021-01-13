@@ -27,7 +27,7 @@ class GeneratedJupiter extends AbstractGenerator{
 		import «qAlgorithm.name»
 		«ENDFOR»
 		«FOR qAlgorithm: qLib.quantumalgorithms»
-		res_«counter++»=«qAlgorithm.name»(
+		res_«counter++»=«qAlgorithm.name».«qAlgorithm.name»(
 		graphname="«qAlgorithm.file.name»"
 			«FOR parameter : qAlgorithm.parameters»
 					,«parameter.name»«parameter.formatParameter.toString»

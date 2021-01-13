@@ -51,11 +51,14 @@ public class GeneratedJupiter extends AbstractGenerator {
           _builder.append("=");
           String _name_1 = qAlgorithm_1.getName();
           _builder.append(_name_1);
+          _builder.append(".");
+          String _name_2 = qAlgorithm_1.getName();
+          _builder.append(_name_2);
           _builder.append("(");
           _builder.newLineIfNotEmpty();
           _builder.append("graphname=\"");
-          String _name_2 = qAlgorithm_1.getFile().getName();
-          _builder.append(_name_2);
+          String _name_3 = qAlgorithm_1.getFile().getName();
+          _builder.append(_name_3);
           _builder.append("\"");
           _builder.newLineIfNotEmpty();
           {
@@ -63,8 +66,8 @@ public class GeneratedJupiter extends AbstractGenerator {
             for(final Parameter parameter : _parameters) {
               _builder.append("\t");
               _builder.append(",");
-              String _name_3 = parameter.getName();
-              _builder.append(_name_3, "\t");
+              String _name_4 = parameter.getName();
+              _builder.append(_name_4, "\t");
               String _string = this.formatParameter(parameter).toString();
               _builder.append(_string, "\t");
               _builder.newLineIfNotEmpty();
