@@ -37,10 +37,11 @@ public enum DATATYPE implements Enumerator {
 	 * @ordered
 	 */
 	INTEGER(1, "INTEGER", "INTEGER"),
+
 	/**
 	 * The '<em><b>GRAPH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #GRAPH_VALUE
 	 * @generated
 	 * @ordered

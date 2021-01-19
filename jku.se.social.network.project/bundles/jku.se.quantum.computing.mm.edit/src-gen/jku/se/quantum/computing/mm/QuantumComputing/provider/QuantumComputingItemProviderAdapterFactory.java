@@ -142,29 +142,6 @@ public class QuantumComputingItemProviderAdapterFactory extends QuantumComputing
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link jku.se.quantum.computing.mm.QuantumComputing.File} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FileItemProvider fileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link jku.se.quantum.computing.mm.QuantumComputing.File}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFileAdapter() {
-		if (fileItemProvider == null) {
-			fileItemProvider = new FileItemProvider(this);
-		}
-
-		return fileItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -269,8 +246,6 @@ public class QuantumComputingItemProviderAdapterFactory extends QuantumComputing
 			quantumAlgorithmItemProvider.dispose();
 		if (parameterItemProvider != null)
 			parameterItemProvider.dispose();
-		if (fileItemProvider != null)
-			fileItemProvider.dispose();
 	}
 
 }

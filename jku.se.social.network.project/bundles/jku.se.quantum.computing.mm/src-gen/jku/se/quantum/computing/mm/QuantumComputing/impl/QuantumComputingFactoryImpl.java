@@ -63,8 +63,6 @@ public class QuantumComputingFactoryImpl extends EFactoryImpl implements Quantum
 			return createQuantumAlgorithm();
 		case QuantumComputingPackage.PARAMETER:
 			return createParameter();
-		case QuantumComputingPackage.FILE:
-			return createFile();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,16 +126,6 @@ public class QuantumComputingFactoryImpl extends EFactoryImpl implements Quantum
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public File createFile() {
-		FileImpl file = new FileImpl();
-		return file;
 	}
 
 	/**

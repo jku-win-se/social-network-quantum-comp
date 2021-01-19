@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated QCDeployment -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="jku.se.quantum.computing.deployment.QCDeployment.presentation.QCDeploymentModelWizardID"
+            name="%_UI_QCDeploymentModelWizard_label"
+            class="jku.se.quantum.computing.deployment.QCDeployment.presentation.QCDeploymentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QCDeploymentModelFile.gif">
+         <description>%_UI_QCDeploymentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated QCDeployment -->
+      <editor
+            id="jku.se.quantum.computing.deployment.QCDeployment.presentation.QCDeploymentEditorID"
+            name="%_UI_QCDeploymentEditor_label"
+            icon="icons/full/obj16/QCDeploymentModelFile.gif"
+            extensions="qcdeployment"
+            class="jku.se.quantum.computing.deployment.QCDeployment.presentation.QCDeploymentEditor"
+            contributorClass="jku.se.quantum.computing.deployment.QCDeployment.presentation.QCDeploymentActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

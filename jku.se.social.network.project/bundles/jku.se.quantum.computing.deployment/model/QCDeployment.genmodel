@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/jku.se.quantum.computing.deployment/src-gen" creationIcons="false"
+    editDirectory="/jku.se.quantum.computing.deployment.edit/src-gen" editorDirectory="/jku.se.quantum.computing.deployment.editor/src-gen"
+    modelPluginID="jku.se.quantum.computing.deployment" modelName="QCDeployment" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="../../jku.se.quantum.computing.mm/model/QuantumComputing.genmodel#//QuantumComputing ../../jku.se.social.network.mm/model/SocialNetwork.genmodel#//SocialNetwork"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>QCDeployment.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="QCDeployment" basePackage="jku.se.quantum.computing.deployment"
+      disposableProviderFactory="true" ecorePackage="QCDeployment.ecore#/">
+    <genClasses ecoreClass="QCDeployment.ecore#//Credential"/>
+    <genClasses ecoreClass="QCDeployment.ecore#//Token">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//Token/tokenValue"/>
+    </genClasses>
+    <genClasses ecoreClass="QCDeployment.ecore#//BasicAuth">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//BasicAuth/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//BasicAuth/password"/>
+    </genClasses>
+    <genClasses ecoreClass="QCDeployment.ecore#//Deployment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//Deployment/credential"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//Deployment/algorithmexecution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//Deployment/name"/>
+    </genClasses>
+    <genClasses ecoreClass="QCDeployment.ecore#//AlgorithmExecution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//AlgorithmExecution/algorithmexecution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//AlgorithmExecution/data"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

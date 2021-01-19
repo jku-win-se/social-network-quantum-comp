@@ -62,7 +62,6 @@ public class QuantumLibraryItemProvider extends NamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(QuantumComputingPackage.Literals.QUANTUM_LIBRARY__QUANTUMALGORITHMS);
-			childrenFeatures.add(QuantumComputingPackage.Literals.QUANTUM_LIBRARY__FILES);
 		}
 		return childrenFeatures;
 	}
@@ -127,7 +126,6 @@ public class QuantumLibraryItemProvider extends NamedElementItemProvider {
 
 		switch (notification.getFeatureID(QuantumLibrary.class)) {
 		case QuantumComputingPackage.QUANTUM_LIBRARY__QUANTUMALGORITHMS:
-		case QuantumComputingPackage.QUANTUM_LIBRARY__FILES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -148,9 +146,6 @@ public class QuantumLibraryItemProvider extends NamedElementItemProvider {
 		newChildDescriptors
 				.add(createChildParameter(QuantumComputingPackage.Literals.QUANTUM_LIBRARY__QUANTUMALGORITHMS,
 						QuantumComputingFactory.eINSTANCE.createQuantumAlgorithm()));
-
-		newChildDescriptors.add(createChildParameter(QuantumComputingPackage.Literals.QUANTUM_LIBRARY__FILES,
-				QuantumComputingFactory.eINSTANCE.createFile()));
 	}
 
 }

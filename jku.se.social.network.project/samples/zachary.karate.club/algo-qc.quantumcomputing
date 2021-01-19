@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <qc:QuantumLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qc="http://quantum-computing/1.0" name="Library-QC-Algorithms">
-  <quantumalgorithms name="GB1" file="//@files.0">
+  <quantumalgorithms name="GB1">
     <parameters name="backend" value="simulator"/>
     <parameters name="subset_size" value="12" dataType="INTEGER"/>
   </quantumalgorithms>
-  <quantumalgorithms name="GB2_mod" file="//@files.0">
+  <quantumalgorithms name="GB2_mod">
     <parameters name="k" value="None" dataType="INTEGER"/>
     <parameters name="backend" value="simulator"/>
     <parameters name="subset_size" value="12" dataType="INTEGER"/>
   </quantumalgorithms>
-  <quantumalgorithms name="QA1" file="//@files.0"/>
-  <files name="ZacharyKarateClub"/>
+  <quantumalgorithms name="QA1"/>
 </qc:QuantumLibrary>

@@ -2,7 +2,6 @@
  */
 package jku.se.quantum.computing.mm.QuantumComputing.impl;
 
-import jku.se.quantum.computing.mm.QuantumComputing.File;
 import jku.se.quantum.computing.mm.QuantumComputing.NamedElement;
 import jku.se.quantum.computing.mm.QuantumComputing.Parameter;
 import jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm;
@@ -52,13 +51,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 	 * @generated
 	 */
 	private EClass namedElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,15 +146,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQuantumLibrary_Files() {
-		return (EReference) quantumLibraryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getQuantumAlgorithm() {
 		return quantumAlgorithmEClass;
 	}
@@ -174,15 +157,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 	 */
 	public EReference getQuantumAlgorithm_Parameters() {
 		return (EReference) quantumAlgorithmEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuantumAlgorithm_File() {
-		return (EReference) quantumAlgorithmEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -244,15 +218,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFile() {
-		return fileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getDATATYPE() {
 		return datatypeEEnum;
 	}
@@ -288,11 +253,9 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 		// Create classes and their features
 		quantumLibraryEClass = createEClass(QUANTUM_LIBRARY);
 		createEReference(quantumLibraryEClass, QUANTUM_LIBRARY__QUANTUMALGORITHMS);
-		createEReference(quantumLibraryEClass, QUANTUM_LIBRARY__FILES);
 
 		quantumAlgorithmEClass = createEClass(QUANTUM_ALGORITHM);
 		createEReference(quantumAlgorithmEClass, QUANTUM_ALGORITHM__PARAMETERS);
-		createEReference(quantumAlgorithmEClass, QUANTUM_ALGORITHM__FILE);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEAttribute(parameterEClass, PARAMETER__NAME);
@@ -301,8 +264,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
-
-		fileEClass = createEClass(FILE);
 
 		// Create enums
 		datatypeEEnum = createEEnum(DATATYPE);
@@ -339,26 +300,19 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 		// Add supertypes to classes
 		quantumLibraryEClass.getESuperTypes().add(this.getNamedElement());
 		quantumAlgorithmEClass.getESuperTypes().add(this.getNamedElement());
-		fileEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quantumLibraryEClass, QuantumLibrary.class, "QuantumLibrary", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantumLibrary_Quantumalgorithms(), this.getQuantumAlgorithm(), null, "quantumalgorithms",
-				null, 0, -1, QuantumLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				null, 1, -1, QuantumLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumLibrary_Files(), this.getFile(), null, "files", null, 0, -1, QuantumLibrary.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(quantumAlgorithmEClass, QuantumAlgorithm.class, "QuantumAlgorithm", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantumAlgorithm_Parameters(), this.getParameter(), null, "parameters", null, 0, -1,
 				QuantumAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumAlgorithm_File(), this.getFile(), null, "file", null, 1, 1, QuantumAlgorithm.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -373,8 +327,6 @@ public class QuantumComputingPackageImpl extends EPackageImpl implements Quantum
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(datatypeEEnum, jku.se.quantum.computing.mm.QuantumComputing.DATATYPE.class, "DATATYPE");

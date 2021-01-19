@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCDeployment:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:QCDeployment="http://quantum-computing/deployment/1.0" name="quantum-algo-deployment">
+  <credential xsi:type="QCDeployment:Token" tokenValue="alphanumeric_characters"/>
+  <algorithmexecution>
+    <algorithmexecution href="algo-qc.quantumcomputing#//@quantumalgorithms.0"/>
+    <data href="zachary.socialnetwork#/"/>
+  </algorithmexecution>
+  <algorithmexecution>
+    <algorithmexecution href="algo-qc.quantumcomputing#//@quantumalgorithms.1"/>
+    <data href="zachary.socialnetwork#/"/>
+  </algorithmexecution>
+  <algorithmexecution>
+    <algorithmexecution href="algo-qc.quantumcomputing#//@quantumalgorithms.2"/>
+    <data href="zachary.socialnetwork#/"/>
+  </algorithmexecution>
+</QCDeployment:Deployment>

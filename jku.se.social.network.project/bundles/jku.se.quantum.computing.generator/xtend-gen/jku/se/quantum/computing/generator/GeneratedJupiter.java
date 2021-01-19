@@ -1,9 +1,12 @@
 package jku.se.quantum.computing.generator;
 
+import jku.se.quantum.computing.deployment.QCDeployment.AlgorithmExecution;
+import jku.se.quantum.computing.deployment.QCDeployment.BasicAuth;
+import jku.se.quantum.computing.deployment.QCDeployment.Credential;
+import jku.se.quantum.computing.deployment.QCDeployment.Deployment;
+import jku.se.quantum.computing.deployment.QCDeployment.Token;
 import jku.se.quantum.computing.mm.QuantumComputing.DATATYPE;
 import jku.se.quantum.computing.mm.QuantumComputing.Parameter;
-import jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm;
-import jku.se.quantum.computing.mm.QuantumComputing.QuantumLibrary;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -17,64 +20,49 @@ public class GeneratedJupiter extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource res, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     EObject rootEObject = res.getContents().get(0);
-    if ((rootEObject instanceof QuantumLibrary)) {
-      QuantumLibrary qLib = ((QuantumLibrary)rootEObject);
-      String _name = qLib.getName();
+    if ((rootEObject instanceof Deployment)) {
+      Deployment deployElement = ((Deployment)rootEObject);
+      String _name = deployElement.getName();
       String _plus = ("qc/" + _name);
       String _plus_1 = (_plus + ".ipynb");
-      fsa.generateFile(_plus_1, this.generateQuantumExecution(qLib));
+      fsa.generateFile(_plus_1, this.generateQuantumDeployment(deployElement));
     }
   }
   
-  public CharSequence generateQuantumExecution(final QuantumLibrary qLib) {
+  public CharSequence generateQuantumDeployment(final Deployment deployElement) {
     CharSequence _xblockexpression = null;
     {
       int counter = 0;
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("import import_ipynb");
+      _builder.append("// Credentials");
       _builder.newLine();
       {
-        EList<QuantumAlgorithm> _quantumalgorithms = qLib.getQuantumalgorithms();
-        for(final QuantumAlgorithm qAlgorithm : _quantumalgorithms) {
-          _builder.append("import ");
-          String _name = qAlgorithm.getName();
-          _builder.append(_name);
+        EList<Credential> _credential = deployElement.getCredential();
+        for(final Credential credential : _credential) {
+          CharSequence _format = this.format(credential);
+          _builder.append(_format);
           _builder.newLineIfNotEmpty();
         }
       }
+      _builder.append("// ALgorithm Execution");
+      _builder.newLine();
       {
-        EList<QuantumAlgorithm> _quantumalgorithms_1 = qLib.getQuantumalgorithms();
-        for(final QuantumAlgorithm qAlgorithm_1 : _quantumalgorithms_1) {
+        EList<AlgorithmExecution> _algorithmexecution = deployElement.getAlgorithmexecution();
+        for(final AlgorithmExecution algorithm : _algorithmexecution) {
           _builder.append("res_");
           int _plusPlus = counter++;
           _builder.append(_plusPlus);
           _builder.append("=");
-          String _name_1 = qAlgorithm_1.getName();
-          _builder.append(_name_1);
+          String _name = algorithm.getAlgorithmexecution().getName();
+          _builder.append(_name);
           _builder.append(".");
-          String _name_2 = qAlgorithm_1.getName();
-          _builder.append(_name_2);
+          String _name_1 = algorithm.getAlgorithmexecution().getName();
+          _builder.append(_name_1);
           _builder.append("(");
-          _builder.newLineIfNotEmpty();
-          _builder.append("graphname=\"");
-          String _name_3 = qAlgorithm_1.getFile().getName();
-          _builder.append(_name_3);
-          _builder.append("\"");
-          _builder.newLineIfNotEmpty();
-          {
-            EList<Parameter> _parameters = qAlgorithm_1.getParameters();
-            for(final Parameter parameter : _parameters) {
-              _builder.append("\t");
-              _builder.append(",");
-              String _name_4 = parameter.getName();
-              _builder.append(_name_4, "\t");
-              String _string = this.formatParameter(parameter).toString();
-              _builder.append(_string, "\t");
-              _builder.newLineIfNotEmpty();
-            }
-          }
+          CharSequence _format_1 = this.format(algorithm);
+          _builder.append(_format_1);
           _builder.append(")");
-          _builder.newLine();
+          _builder.newLineIfNotEmpty();
         }
       }
       _xblockexpression = _builder;
@@ -82,7 +70,28 @@ public class GeneratedJupiter extends AbstractGenerator {
     return _xblockexpression;
   }
   
-  public CharSequence formatParameter(final Parameter parameter) {
+  public CharSequence format(final AlgorithmExecution algorithmExecution) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("graphname=\"");
+    String _name = algorithmExecution.getData().getName();
+    _builder.append(_name);
+    _builder.append("\",");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<Parameter> _parameters = algorithmExecution.getAlgorithmexecution().getParameters();
+      for(final Parameter parameter : _parameters) {
+        _builder.append(",");
+        String _name_1 = parameter.getName();
+        _builder.append(_name_1);
+        CharSequence _format = this.format(parameter);
+        _builder.append(_format);
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence format(final Parameter parameter) {
     StringConcatenation _builder = new StringConcatenation();
     {
       if (((parameter.getValue() != null) && (parameter.getValue().isEmpty() == false))) {
@@ -110,5 +119,36 @@ public class GeneratedJupiter extends AbstractGenerator {
       }
     }
     return _builder;
+  }
+  
+  public CharSequence format(final Credential credential) {
+    CharSequence _xifexpression = null;
+    if ((credential instanceof Token)) {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("token = \"");
+      String _tokenValue = ((Token)credential).getTokenValue();
+      _builder.append(_tokenValue);
+      _builder.append("\"");
+      _builder.newLineIfNotEmpty();
+      _xifexpression = _builder;
+    } else {
+      CharSequence _xifexpression_1 = null;
+      if ((credential instanceof BasicAuth)) {
+        StringConcatenation _builder_1 = new StringConcatenation();
+        _builder_1.append("username = \"");
+        String _username = ((BasicAuth)credential).getUsername();
+        _builder_1.append(_username);
+        _builder_1.append("\";");
+        _builder_1.newLineIfNotEmpty();
+        _builder_1.append("pasword = \"");
+        String _password = ((BasicAuth)credential).getPassword();
+        _builder_1.append(_password);
+        _builder_1.append("\";");
+        _builder_1.newLineIfNotEmpty();
+        _xifexpression_1 = _builder_1;
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return _xifexpression;
   }
 }

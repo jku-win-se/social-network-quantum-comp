@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm#getParameters <em>Parameters</em>}</li>
- *   <li>{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm#getFile <em>File</em>}</li>
  * </ul>
  *
  * @see jku.se.quantum.computing.mm.QuantumComputing.QuantumComputingPackage#getQuantumAlgorithm()
@@ -33,27 +32,5 @@ public interface QuantumAlgorithm extends NamedElement {
 	 * @generated
 	 */
 	EList<Parameter> getParameters();
-
-	/**
-	 * Returns the value of the '<em><b>File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>File</em>' reference.
-	 * @see #setFile(File)
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.QuantumComputingPackage#getQuantumAlgorithm_File()
-	 * @model required="true"
-	 * @generated
-	 */
-	File getFile();
-
-	/**
-	 * Sets the value of the '{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm#getFile <em>File</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>File</em>' reference.
-	 * @see #getFile()
-	 * @generated
-	 */
-	void setFile(File value);
 
 } // QuantumAlgorithm

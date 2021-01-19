@@ -124,22 +124,13 @@ public interface QuantumComputingPackage extends EPackage {
 	int QUANTUM_LIBRARY__QUANTUMALGORITHMS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Files</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTUM_LIBRARY__FILES = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Quantum Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_LIBRARY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int QUANTUM_LIBRARY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Quantum Library</em>' class.
@@ -179,22 +170,13 @@ public interface QuantumComputingPackage extends EPackage {
 	int QUANTUM_ALGORITHM__PARAMETERS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTUM_ALGORITHM__FILE = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Quantum Algorithm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_ALGORITHM_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int QUANTUM_ALGORITHM_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Quantum Algorithm</em>' class.
@@ -261,43 +243,6 @@ public interface QuantumComputingPackage extends EPackage {
 	int PARAMETER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link jku.se.quantum.computing.mm.QuantumComputing.impl.FileImpl <em>File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.impl.FileImpl
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.impl.QuantumComputingPackageImpl#getFile()
-	 * @generated
-	 */
-	int FILE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link jku.se.quantum.computing.mm.QuantumComputing.DATATYPE <em>DATATYPE</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,7 +250,7 @@ public interface QuantumComputingPackage extends EPackage {
 	 * @see jku.se.quantum.computing.mm.QuantumComputing.impl.QuantumComputingPackageImpl#getDATATYPE()
 	 * @generated
 	 */
-	int DATATYPE = 5;
+	int DATATYPE = 4;
 
 	/**
 	 * Returns the meta object for class '{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumLibrary <em>Quantum Library</em>}'.
@@ -329,17 +274,6 @@ public interface QuantumComputingPackage extends EPackage {
 	EReference getQuantumLibrary_Quantumalgorithms();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumLibrary#getFiles <em>Files</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Files</em>'.
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.QuantumLibrary#getFiles()
-	 * @see #getQuantumLibrary()
-	 * @generated
-	 */
-	EReference getQuantumLibrary_Files();
-
-	/**
 	 * Returns the meta object for class '{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm <em>Quantum Algorithm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,17 +293,6 @@ public interface QuantumComputingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQuantumAlgorithm_Parameters();
-
-	/**
-	 * Returns the meta object for the reference '{@link jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>File</em>'.
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.QuantumAlgorithm#getFile()
-	 * @see #getQuantumAlgorithm()
-	 * @generated
-	 */
-	EReference getQuantumAlgorithm_File();
 
 	/**
 	 * Returns the meta object for class '{@link jku.se.quantum.computing.mm.QuantumComputing.Parameter <em>Parameter</em>}'.
@@ -436,16 +359,6 @@ public interface QuantumComputingPackage extends EPackage {
 	EAttribute getNamedElement_Name();
 
 	/**
-	 * Returns the meta object for class '{@link jku.se.quantum.computing.mm.QuantumComputing.File <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>File</em>'.
-	 * @see jku.se.quantum.computing.mm.QuantumComputing.File
-	 * @generated
-	 */
-	EClass getFile();
-
-	/**
 	 * Returns the meta object for enum '{@link jku.se.quantum.computing.mm.QuantumComputing.DATATYPE <em>DATATYPE</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,14 +410,6 @@ public interface QuantumComputingPackage extends EPackage {
 		EReference QUANTUM_LIBRARY__QUANTUMALGORITHMS = eINSTANCE.getQuantumLibrary_Quantumalgorithms();
 
 		/**
-		 * The meta object literal for the '<em><b>Files</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUANTUM_LIBRARY__FILES = eINSTANCE.getQuantumLibrary_Files();
-
-		/**
 		 * The meta object literal for the '{@link jku.se.quantum.computing.mm.QuantumComputing.impl.QuantumAlgorithmImpl <em>Quantum Algorithm</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -521,14 +426,6 @@ public interface QuantumComputingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QUANTUM_ALGORITHM__PARAMETERS = eINSTANCE.getQuantumAlgorithm_Parameters();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUANTUM_ALGORITHM__FILE = eINSTANCE.getQuantumAlgorithm_File();
 
 		/**
 		 * The meta object literal for the '{@link jku.se.quantum.computing.mm.QuantumComputing.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -581,16 +478,6 @@ public interface QuantumComputingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
-
-		/**
-		 * The meta object literal for the '{@link jku.se.quantum.computing.mm.QuantumComputing.impl.FileImpl <em>File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see jku.se.quantum.computing.mm.QuantumComputing.impl.FileImpl
-		 * @see jku.se.quantum.computing.mm.QuantumComputing.impl.QuantumComputingPackageImpl#getFile()
-		 * @generated
-		 */
-		EClass FILE = eINSTANCE.getFile();
 
 		/**
 		 * The meta object literal for the '{@link jku.se.quantum.computing.mm.QuantumComputing.DATATYPE <em>DATATYPE</em>}' enum.

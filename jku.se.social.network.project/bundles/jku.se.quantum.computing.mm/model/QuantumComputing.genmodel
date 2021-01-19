@@ -17,11 +17,9 @@
     </genEnums>
     <genClasses ecoreClass="QuantumComputing.ecore#//QuantumLibrary">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumComputing.ecore#//QuantumLibrary/quantumalgorithms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumComputing.ecore#//QuantumLibrary/files"/>
     </genClasses>
     <genClasses ecoreClass="QuantumComputing.ecore#//QuantumAlgorithm">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumComputing.ecore#//QuantumAlgorithm/parameters"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuantumComputing.ecore#//QuantumAlgorithm/file"/>
     </genClasses>
     <genClasses ecoreClass="QuantumComputing.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumComputing.ecore#//Parameter/name"/>
@@ -31,6 +29,5 @@
     <genClasses ecoreClass="QuantumComputing.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumComputing.ecore#//NamedElement/name"/>
     </genClasses>
-    <genClasses ecoreClass="QuantumComputing.ecore#//File"/>
   </genPackages>
 </genmodel:GenModel>

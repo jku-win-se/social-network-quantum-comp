@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated SocialNetwork -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="jku.se.social.network.mm.SocialNetwork.presentation.SocialNetworkModelWizardID"
+            name="%_UI_SocialNetworkModelWizard_label"
+            class="jku.se.social.network.mm.SocialNetwork.presentation.SocialNetworkModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SocialNetworkModelFile.gif">
+         <description>%_UI_SocialNetworkModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated SocialNetwork -->
+      <editor
+            id="jku.se.social.network.mm.SocialNetwork.presentation.SocialNetworkEditorID"
+            name="%_UI_SocialNetworkEditor_label"
+            icon="icons/full/obj16/SocialNetworkModelFile.gif"
+            extensions="socialnetwork"
+            class="jku.se.social.network.mm.SocialNetwork.presentation.SocialNetworkEditor"
+            contributorClass="jku.se.social.network.mm.SocialNetwork.presentation.SocialNetworkActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

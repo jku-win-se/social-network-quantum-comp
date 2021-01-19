@@ -1,0 +1,164 @@
+/**
+ */
+package jku.se.quantum.computing.deployment.QCDeployment.impl;
+
+import jku.se.quantum.computing.deployment.QCDeployment.QCDeploymentPackage;
+import jku.se.quantum.computing.deployment.QCDeployment.Token;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Token</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link jku.se.quantum.computing.deployment.QCDeployment.impl.TokenImpl#getTokenValue <em>Token Value</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class TokenImpl extends CredentialImpl implements Token {
+	/**
+	 * The default value of the '{@link #getTokenValue() <em>Token Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTokenValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TOKEN_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTokenValue() <em>Token Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTokenValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String tokenValue = TOKEN_VALUE_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TokenImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return QCDeploymentPackage.Literals.TOKEN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTokenValue() {
+		return tokenValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTokenValue(String newTokenValue) {
+		String oldTokenValue = tokenValue;
+		tokenValue = newTokenValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QCDeploymentPackage.TOKEN__TOKEN_VALUE, oldTokenValue,
+					tokenValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case QCDeploymentPackage.TOKEN__TOKEN_VALUE:
+			return getTokenValue();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case QCDeploymentPackage.TOKEN__TOKEN_VALUE:
+			setTokenValue((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case QCDeploymentPackage.TOKEN__TOKEN_VALUE:
+			setTokenValue(TOKEN_VALUE_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case QCDeploymentPackage.TOKEN__TOKEN_VALUE:
+			return TOKEN_VALUE_EDEFAULT == null ? tokenValue != null : !TOKEN_VALUE_EDEFAULT.equals(tokenValue);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (tokenValue: ");
+		result.append(tokenValue);
+		result.append(')');
+		return result.toString();
+	}
+
+} //TokenImpl

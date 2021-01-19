@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: QCGenerator
-Bundle-SymbolicName: jku.se.quantum.computing.generator;singleton:=true
+Bundle-SymbolicName: jku.se.quantum.computing.deployment.generator;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: jku.se.quantum.computing.generator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
@@ -16,5 +16,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.xtext.generator,
  org.eclipse.xtext.util,
  org.eclipse.xtext,
- jku.se.quantum.computing.mm;bundle-version="0.1.0"
+ jku.se.quantum.computing.mm;bundle-version="0.1.0",
+ jku.se.quantum.computing.deployment;bundle-version="0.1.0"
 Import-Package: org.eclipse.core.runtime
