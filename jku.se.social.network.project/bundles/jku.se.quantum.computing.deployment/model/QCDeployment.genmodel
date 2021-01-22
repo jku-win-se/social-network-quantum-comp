@@ -11,16 +11,7 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="QCDeployment" basePackage="jku.se.quantum.computing.deployment"
       disposableProviderFactory="true" ecorePackage="QCDeployment.ecore#/">
-    <genClasses ecoreClass="QCDeployment.ecore#//Credential"/>
-    <genClasses ecoreClass="QCDeployment.ecore#//Token">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//Token/tokenValue"/>
-    </genClasses>
-    <genClasses ecoreClass="QCDeployment.ecore#//BasicAuth">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//BasicAuth/username"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//BasicAuth/password"/>
-    </genClasses>
     <genClasses ecoreClass="QCDeployment.ecore#//Deployment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//Deployment/credential"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QCDeployment.ecore#//Deployment/algorithmexecution"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QCDeployment.ecore#//Deployment/name"/>
     </genClasses>
