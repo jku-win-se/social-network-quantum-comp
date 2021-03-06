@@ -4,7 +4,7 @@ The repository includes 3 different algorithms for community detection in social
 All of the proposed algorithms optimize for a maximum modularity as it has been defined by Newman et al. [1].
 
 Within the quantum annealing approach (QA1) the problem is solved by the D-Wave Hybrid Solver Service. Here, quantum as well as classical solvers are utilized and 
-a direct addressing of discrete quadratic problems is supported.
+a direct addressing of discrete quadratic problems is supported.\
 Due to the lower number of qubits in gate-based devices, such a direct encoding of discrete problems (e.g. via one-hot encoding) 
 is not possible for sufficient problem sizes, which makes heuristics a necessity.
 The first gate-based hybrid algorithm (GB1) iteratively itentifies the strongest community in a graph, with the modularity per node as the underlying metric.
