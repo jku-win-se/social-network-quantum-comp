@@ -18,6 +18,6 @@ It  is  assumed  that  the  algorithm  works  best  for  graphs  with 2^x commun
  
  
  
-References:
-[1] Aaron Clauset, Mark E. J. Newman, and Cristopher Moore. “Finding community structure in very large networks”. In:Physical review. E, Statistical, nonlinear, and soft matter physics 70.6 Pt 2 (2004), p. 066111.issn: 1539-3755.doi:10.1103/PhysRevE.70.066111.
+References:\\
+[1] Aaron Clauset, Mark E. J. Newman, and Cristopher Moore. “Finding community structure in very large networks”. In:Physical review. E, Statistical, nonlinear, and soft matter physics 70.6 Pt 2 (2004), p. 066111.issn: 1539-3755.doi:10.1103/PhysRevE.70.066111.\\
 [2] Ruslan Shaydulin et al. “A Hybrid Approach for Solving OptimizationProblems  on  Small  Quantum  Computers”.  In:Computer52.6  (2019),pp. 18–26.issn: 0018-9162.doi:10.1109/MC.2019.290894.
