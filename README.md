@@ -39,6 +39,7 @@ Import in a runtime environment the [Zackary Club Project](samples/zachary.karat
 
 *Generate NextworkX*
 Right Click over the *.socialnetwork->Generate NetworkX
+
 *Generate Deployment*
 Right Click over the *.qcdeployment->Generate JupiterExecution
 
