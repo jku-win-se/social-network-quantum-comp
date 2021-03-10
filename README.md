@@ -29,5 +29,5 @@ Requirements:
 - Sirius 6.3.4
 - Java 9
 
-Import the plugins from [Bundles]['jku.se.social.network.project/bundles/)
+Import the plugins from [Bundles](jku.se.social.network.project/bundles/)
 
