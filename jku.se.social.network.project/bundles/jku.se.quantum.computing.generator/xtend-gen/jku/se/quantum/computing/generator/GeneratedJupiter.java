@@ -1,10 +1,7 @@
 package jku.se.quantum.computing.generator;
 
 import jku.se.quantum.computing.deployment.QCDeployment.AlgorithmExecution;
-import jku.se.quantum.computing.deployment.QCDeployment.BasicAuth;
-import jku.se.quantum.computing.deployment.QCDeployment.Credential;
 import jku.se.quantum.computing.deployment.QCDeployment.Deployment;
-import jku.se.quantum.computing.deployment.QCDeployment.Token;
 import jku.se.quantum.computing.mm.QuantumComputing.DATATYPE;
 import jku.se.quantum.computing.mm.QuantumComputing.Parameter;
 import org.eclipse.emf.common.util.EList;
@@ -34,16 +31,6 @@ public class GeneratedJupiter extends AbstractGenerator {
     {
       int counter = 0;
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("// Credentials");
-      _builder.newLine();
-      {
-        EList<Credential> _credential = deployElement.getCredential();
-        for(final Credential credential : _credential) {
-          CharSequence _format = this.format(credential);
-          _builder.append(_format);
-          _builder.newLineIfNotEmpty();
-        }
-      }
       _builder.append("// ALgorithm Execution");
       _builder.newLine();
       {
@@ -59,8 +46,8 @@ public class GeneratedJupiter extends AbstractGenerator {
           String _name_1 = algorithm.getAlgorithmexecution().getName();
           _builder.append(_name_1);
           _builder.append("(");
-          CharSequence _format_1 = this.format(algorithm);
-          _builder.append(_format_1);
+          CharSequence _format = this.format(algorithm);
+          _builder.append(_format);
           _builder.append(")");
           _builder.newLineIfNotEmpty();
         }
@@ -119,36 +106,5 @@ public class GeneratedJupiter extends AbstractGenerator {
       }
     }
     return _builder;
-  }
-  
-  public CharSequence format(final Credential credential) {
-    CharSequence _xifexpression = null;
-    if ((credential instanceof Token)) {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("token = \"");
-      String _tokenValue = ((Token)credential).getTokenValue();
-      _builder.append(_tokenValue);
-      _builder.append("\"");
-      _builder.newLineIfNotEmpty();
-      _xifexpression = _builder;
-    } else {
-      CharSequence _xifexpression_1 = null;
-      if ((credential instanceof BasicAuth)) {
-        StringConcatenation _builder_1 = new StringConcatenation();
-        _builder_1.append("username = \"");
-        String _username = ((BasicAuth)credential).getUsername();
-        _builder_1.append(_username);
-        _builder_1.append("\";");
-        _builder_1.newLineIfNotEmpty();
-        _builder_1.append("pasword = \"");
-        String _password = ((BasicAuth)credential).getPassword();
-        _builder_1.append(_password);
-        _builder_1.append("\";");
-        _builder_1.newLineIfNotEmpty();
-        _xifexpression_1 = _builder_1;
-      }
-      _xifexpression = _xifexpression_1;
-    }
-    return _xifexpression;
   }
 }

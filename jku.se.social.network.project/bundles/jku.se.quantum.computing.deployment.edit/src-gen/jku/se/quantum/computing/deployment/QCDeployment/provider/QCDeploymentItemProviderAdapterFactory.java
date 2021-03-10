@@ -73,52 +73,6 @@ public class QCDeploymentItemProviderAdapterFactory extends QCDeploymentAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link jku.se.quantum.computing.deployment.QCDeployment.Token} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TokenItemProvider tokenItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link jku.se.quantum.computing.deployment.QCDeployment.Token}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTokenAdapter() {
-		if (tokenItemProvider == null) {
-			tokenItemProvider = new TokenItemProvider(this);
-		}
-
-		return tokenItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link jku.se.quantum.computing.deployment.QCDeployment.BasicAuth} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BasicAuthItemProvider basicAuthItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link jku.se.quantum.computing.deployment.QCDeployment.BasicAuth}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBasicAuthAdapter() {
-		if (basicAuthItemProvider == null) {
-			basicAuthItemProvider = new BasicAuthItemProvider(this);
-		}
-
-		return basicAuthItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link jku.se.quantum.computing.deployment.QCDeployment.Deployment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,10 +217,6 @@ public class QCDeploymentItemProviderAdapterFactory extends QCDeploymentAdapterF
 	 * @generated
 	 */
 	public void dispose() {
-		if (tokenItemProvider != null)
-			tokenItemProvider.dispose();
-		if (basicAuthItemProvider != null)
-			basicAuthItemProvider.dispose();
 		if (deploymentItemProvider != null)
 			deploymentItemProvider.dispose();
 		if (algorithmExecutionItemProvider != null)

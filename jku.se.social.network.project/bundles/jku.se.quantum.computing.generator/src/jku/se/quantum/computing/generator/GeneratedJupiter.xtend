@@ -8,9 +8,6 @@ import org.eclipse.emf.ecore.EObject
 import jku.se.quantum.computing.mm.QuantumComputing.Parameter
 import jku.se.quantum.computing.mm.QuantumComputing.DATATYPE
 import jku.se.quantum.computing.deployment.QCDeployment.Deployment
-import jku.se.quantum.computing.deployment.QCDeployment.Credential
-import jku.se.quantum.computing.deployment.QCDeployment.Token
-import jku.se.quantum.computing.deployment.QCDeployment.BasicAuth
 import jku.se.quantum.computing.deployment.QCDeployment.AlgorithmExecution
 
 class GeneratedJupiter extends AbstractGenerator{
@@ -26,10 +23,6 @@ class GeneratedJupiter extends AbstractGenerator{
 	def generateQuantumDeployment(Deployment deployElement) {
 		var int counter = 0;
 		'''
-		// Credentials
-		«FOR credential: deployElement.credential»
-			«credential.format»
-		«ENDFOR»
 		// ALgorithm Execution
 		«FOR algorithm: deployElement.algorithmexecution»
 			res_«counter++»=«algorithm.algorithmexecution.name».«algorithm.algorithmexecution.name»(«algorithm.format»)
@@ -57,18 +50,5 @@ class GeneratedJupiter extends AbstractGenerator{
 			«ENDIF»
 		«ENDIF»
 		'''
-	}
-	
-	def format(Credential credential) {
-		if (credential instanceof Token) {
-			'''
-			token = "«credential.tokenValue»"
-			'''
-		} else if (credential instanceof BasicAuth) {
-			'''
-			username = "«credential.username»";
-			pasword = "«credential.password»";
-			'''
-		}
-	}	
+	}		
 }

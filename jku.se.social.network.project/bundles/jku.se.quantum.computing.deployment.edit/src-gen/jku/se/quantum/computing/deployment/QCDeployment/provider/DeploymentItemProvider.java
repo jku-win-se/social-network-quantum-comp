@@ -89,7 +89,6 @@ public class DeploymentItemProvider extends ItemProviderAdapter implements IEdit
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QCDeploymentPackage.Literals.DEPLOYMENT__CREDENTIAL);
 			childrenFeatures.add(QCDeploymentPackage.Literals.DEPLOYMENT__ALGORITHMEXECUTION);
 		}
 		return childrenFeatures;
@@ -157,7 +156,6 @@ public class DeploymentItemProvider extends ItemProviderAdapter implements IEdit
 		case QCDeploymentPackage.DEPLOYMENT__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -175,12 +173,6 @@ public class DeploymentItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(QCDeploymentPackage.Literals.DEPLOYMENT__CREDENTIAL,
-				QCDeploymentFactory.eINSTANCE.createToken()));
-
-		newChildDescriptors.add(createChildParameter(QCDeploymentPackage.Literals.DEPLOYMENT__CREDENTIAL,
-				QCDeploymentFactory.eINSTANCE.createBasicAuth()));
 
 		newChildDescriptors.add(createChildParameter(QCDeploymentPackage.Literals.DEPLOYMENT__ALGORITHMEXECUTION,
 				QCDeploymentFactory.eINSTANCE.createAlgorithmExecution()));

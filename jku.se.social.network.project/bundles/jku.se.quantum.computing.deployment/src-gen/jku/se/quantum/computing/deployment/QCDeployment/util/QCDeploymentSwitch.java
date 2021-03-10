@@ -66,31 +66,6 @@ public class QCDeploymentSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case QCDeploymentPackage.CREDENTIAL: {
-			Credential credential = (Credential) theEObject;
-			T result = caseCredential(credential);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QCDeploymentPackage.TOKEN: {
-			Token token = (Token) theEObject;
-			T result = caseToken(token);
-			if (result == null)
-				result = caseCredential(token);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QCDeploymentPackage.BASIC_AUTH: {
-			BasicAuth basicAuth = (BasicAuth) theEObject;
-			T result = caseBasicAuth(basicAuth);
-			if (result == null)
-				result = caseCredential(basicAuth);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case QCDeploymentPackage.DEPLOYMENT: {
 			Deployment deployment = (Deployment) theEObject;
 			T result = caseDeployment(deployment);
@@ -108,51 +83,6 @@ public class QCDeploymentSwitch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Credential</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Credential</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCredential(Credential object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToken(Token object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Basic Auth</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Basic Auth</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBasicAuth(BasicAuth object) {
-		return null;
 	}
 
 	/**

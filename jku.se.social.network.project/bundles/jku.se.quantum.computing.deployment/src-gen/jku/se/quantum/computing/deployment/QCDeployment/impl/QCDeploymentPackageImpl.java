@@ -3,12 +3,9 @@
 package jku.se.quantum.computing.deployment.QCDeployment.impl;
 
 import jku.se.quantum.computing.deployment.QCDeployment.AlgorithmExecution;
-import jku.se.quantum.computing.deployment.QCDeployment.BasicAuth;
-import jku.se.quantum.computing.deployment.QCDeployment.Credential;
 import jku.se.quantum.computing.deployment.QCDeployment.Deployment;
 import jku.se.quantum.computing.deployment.QCDeployment.QCDeploymentFactory;
 import jku.se.quantum.computing.deployment.QCDeployment.QCDeploymentPackage;
-import jku.se.quantum.computing.deployment.QCDeployment.Token;
 
 import jku.se.quantum.computing.mm.QuantumComputing.QuantumComputingPackage;
 
@@ -28,27 +25,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymentPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass credentialEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass basicAuthEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -136,60 +112,6 @@ public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCredential() {
-		return credentialEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getToken() {
-		return tokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getToken_TokenValue() {
-		return (EAttribute) tokenEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBasicAuth() {
-		return basicAuthEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBasicAuth_Username() {
-		return (EAttribute) basicAuthEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBasicAuth_Password() {
-		return (EAttribute) basicAuthEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDeployment() {
 		return deploymentEClass;
 	}
@@ -199,7 +121,7 @@ public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeployment_Credential() {
+	public EReference getDeployment_Algorithmexecution() {
 		return (EReference) deploymentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -208,17 +130,8 @@ public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeployment_Algorithmexecution() {
-		return (EReference) deploymentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getDeployment_Name() {
-		return (EAttribute) deploymentEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) deploymentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -277,17 +190,7 @@ public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymen
 		isCreated = true;
 
 		// Create classes and their features
-		credentialEClass = createEClass(CREDENTIAL);
-
-		tokenEClass = createEClass(TOKEN);
-		createEAttribute(tokenEClass, TOKEN__TOKEN_VALUE);
-
-		basicAuthEClass = createEClass(BASIC_AUTH);
-		createEAttribute(basicAuthEClass, BASIC_AUTH__USERNAME);
-		createEAttribute(basicAuthEClass, BASIC_AUTH__PASSWORD);
-
 		deploymentEClass = createEClass(DEPLOYMENT);
-		createEReference(deploymentEClass, DEPLOYMENT__CREDENTIAL);
 		createEReference(deploymentEClass, DEPLOYMENT__ALGORITHMEXECUTION);
 		createEAttribute(deploymentEClass, DEPLOYMENT__NAME);
 
@@ -331,29 +234,10 @@ public class QCDeploymentPackageImpl extends EPackageImpl implements QCDeploymen
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		tokenEClass.getESuperTypes().add(this.getCredential());
-		basicAuthEClass.getESuperTypes().add(this.getCredential());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(credentialEClass, Credential.class, "Credential", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getToken_TokenValue(), ecorePackage.getEString(), "tokenValue", null, 0, 1, Token.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(basicAuthEClass, BasicAuth.class, "BasicAuth", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBasicAuth_Username(), ecorePackage.getEString(), "username", null, 0, 1, BasicAuth.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBasicAuth_Password(), ecorePackage.getEString(), "password", null, 0, 1, BasicAuth.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(deploymentEClass, Deployment.class, "Deployment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeployment_Credential(), this.getCredential(), null, "credential", null, 0, -1,
-				Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDeployment_Algorithmexecution(), this.getAlgorithmExecution(), null, "algorithmexecution",
 				null, 1, -1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

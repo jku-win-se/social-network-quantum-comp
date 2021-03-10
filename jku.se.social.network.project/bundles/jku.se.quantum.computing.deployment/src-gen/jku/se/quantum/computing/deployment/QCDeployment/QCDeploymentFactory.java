@@ -23,24 +23,6 @@ public interface QCDeploymentFactory extends EFactory {
 			.init();
 
 	/**
-	 * Returns a new object of class '<em>Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Token</em>'.
-	 * @generated
-	 */
-	Token createToken();
-
-	/**
-	 * Returns a new object of class '<em>Basic Auth</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Basic Auth</em>'.
-	 * @generated
-	 */
-	BasicAuth createBasicAuth();
-
-	/**
 	 * Returns a new object of class '<em>Deployment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

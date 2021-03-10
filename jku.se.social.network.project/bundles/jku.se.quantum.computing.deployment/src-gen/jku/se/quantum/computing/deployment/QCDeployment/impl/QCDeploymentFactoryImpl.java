@@ -56,10 +56,6 @@ public class QCDeploymentFactoryImpl extends EFactoryImpl implements QCDeploymen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case QCDeploymentPackage.TOKEN:
-			return createToken();
-		case QCDeploymentPackage.BASIC_AUTH:
-			return createBasicAuth();
 		case QCDeploymentPackage.DEPLOYMENT:
 			return createDeployment();
 		case QCDeploymentPackage.ALGORITHM_EXECUTION:
@@ -67,26 +63,6 @@ public class QCDeploymentFactoryImpl extends EFactoryImpl implements QCDeploymen
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Token createToken() {
-		TokenImpl token = new TokenImpl();
-		return token;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BasicAuth createBasicAuth() {
-		BasicAuthImpl basicAuth = new BasicAuthImpl();
-		return basicAuth;
 	}
 
 	/**

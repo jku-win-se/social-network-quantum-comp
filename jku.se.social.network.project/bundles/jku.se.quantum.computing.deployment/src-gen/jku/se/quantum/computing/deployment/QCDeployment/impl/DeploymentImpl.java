@@ -5,7 +5,6 @@ package jku.se.quantum.computing.deployment.QCDeployment.impl;
 import java.util.Collection;
 
 import jku.se.quantum.computing.deployment.QCDeployment.AlgorithmExecution;
-import jku.se.quantum.computing.deployment.QCDeployment.Credential;
 import jku.se.quantum.computing.deployment.QCDeployment.Deployment;
 import jku.se.quantum.computing.deployment.QCDeployment.QCDeploymentPackage;
 
@@ -31,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link jku.se.quantum.computing.deployment.QCDeployment.impl.DeploymentImpl#getCredential <em>Credential</em>}</li>
  *   <li>{@link jku.se.quantum.computing.deployment.QCDeployment.impl.DeploymentImpl#getAlgorithmexecution <em>Algorithmexecution</em>}</li>
  *   <li>{@link jku.se.quantum.computing.deployment.QCDeployment.impl.DeploymentImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -39,16 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class DeploymentImpl extends MinimalEObjectImpl.Container implements Deployment {
-	/**
-	 * The cached value of the '{@link #getCredential() <em>Credential</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCredential()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Credential> credential;
-
 	/**
 	 * The cached value of the '{@link #getAlgorithmexecution() <em>Algorithmexecution</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -103,19 +91,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Credential> getCredential() {
-		if (credential == null) {
-			credential = new EObjectContainmentEList<Credential>(Credential.class, this,
-					QCDeploymentPackage.DEPLOYMENT__CREDENTIAL);
-		}
-		return credential;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<AlgorithmExecution> getAlgorithmexecution() {
 		if (algorithmexecution == null) {
 			algorithmexecution = new EObjectContainmentEList<AlgorithmExecution>(AlgorithmExecution.class, this,
@@ -153,8 +128,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
-			return ((InternalEList<?>) getCredential()).basicRemove(otherEnd, msgs);
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			return ((InternalEList<?>) getAlgorithmexecution()).basicRemove(otherEnd, msgs);
 		}
@@ -169,8 +142,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
-			return getCredential();
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			return getAlgorithmexecution();
 		case QCDeploymentPackage.DEPLOYMENT__NAME:
@@ -188,10 +159,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
-			getCredential().clear();
-			getCredential().addAll((Collection<? extends Credential>) newValue);
-			return;
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			getAlgorithmexecution().clear();
 			getAlgorithmexecution().addAll((Collection<? extends AlgorithmExecution>) newValue);
@@ -211,9 +178,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
-			getCredential().clear();
-			return;
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			getAlgorithmexecution().clear();
 			return;
@@ -232,8 +196,6 @@ public class DeploymentImpl extends MinimalEObjectImpl.Container implements Depl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QCDeploymentPackage.DEPLOYMENT__CREDENTIAL:
-			return credential != null && !credential.isEmpty();
 		case QCDeploymentPackage.DEPLOYMENT__ALGORITHMEXECUTION:
 			return algorithmexecution != null && !algorithmexecution.isEmpty();
 		case QCDeploymentPackage.DEPLOYMENT__NAME:

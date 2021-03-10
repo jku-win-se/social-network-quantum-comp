@@ -67,21 +67,6 @@ public class QCDeploymentAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected QCDeploymentSwitch<Adapter> modelSwitch = new QCDeploymentSwitch<Adapter>() {
 		@Override
-		public Adapter caseCredential(Credential object) {
-			return createCredentialAdapter();
-		}
-
-		@Override
-		public Adapter caseToken(Token object) {
-			return createTokenAdapter();
-		}
-
-		@Override
-		public Adapter caseBasicAuth(BasicAuth object) {
-			return createBasicAuthAdapter();
-		}
-
-		@Override
 		public Adapter caseDeployment(Deployment object) {
 			return createDeploymentAdapter();
 		}
@@ -108,48 +93,6 @@ public class QCDeploymentAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link jku.se.quantum.computing.deployment.QCDeployment.Credential <em>Credential</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see jku.se.quantum.computing.deployment.QCDeployment.Credential
-	 * @generated
-	 */
-	public Adapter createCredentialAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link jku.se.quantum.computing.deployment.QCDeployment.Token <em>Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see jku.se.quantum.computing.deployment.QCDeployment.Token
-	 * @generated
-	 */
-	public Adapter createTokenAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link jku.se.quantum.computing.deployment.QCDeployment.BasicAuth <em>Basic Auth</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see jku.se.quantum.computing.deployment.QCDeployment.BasicAuth
-	 * @generated
-	 */
-	public Adapter createBasicAuthAdapter() {
-		return null;
 	}
 
 	/**
