@@ -47,4 +47,4 @@ Import in a runtime environment the [Zackary Club Project](samples/zachary.karat
  
  **Zackary Club Example:** 
  
-![Zackary Club Example](/images/zackary-club-example.png)
+![Zackary Club Example](jku.se.social.network.project/images/zackary-club-example.png)
