@@ -27,7 +27,7 @@ References:\
 Requirements:
 - Eclipse 2020-09 (4.17.0)
 - Sirius 6.3.4
-- Java 9
+- Java 11
 
 Import the plugins from [Bundles](jku.se.social.network.project/bundles/)
 
