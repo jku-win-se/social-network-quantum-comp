@@ -31,3 +31,14 @@ Requirements:
 
 Import the plugins from [Bundles](jku.se.social.network.project/bundles/)
 
+Example:
+
+To test our tool, you may test the example of the Zackary-Club.
+
+Import in a runtime environment the [Zackary Club Project](samples/zachary.karate.club/)
+
+*Generate NextworkX*
+Right Click over the *.socialnetwork->Generate NetworkX
+*Generate Deployment*
+Right Click over the *.qcdeployment->Generate JupiterExecution
+
