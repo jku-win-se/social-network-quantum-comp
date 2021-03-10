@@ -38,8 +38,11 @@ To test our tool, you may test the example of the Zackary-Club.
 Import in a runtime environment the [Zackary Club Project](samples/zachary.karate.club/)
 
 *Generate NextworkX*
-Right Click over the *.socialnetwork->Generate NetworkX
+ Right Click over the *.socialnetwork->Generate NetworkX
+ Artifact Generated in project_name/networkX
 
 *Generate Deployment*
-Right Click over the *.qcdeployment->Generate JupiterExecution
-
+ Right Click over the *.qcdeployment->Generate JupiterExecution
+ Artifact Generated in project_name/qc
+ 
+ 
